@@ -47,5 +47,5 @@ jobs:
       - name: Tag and push Docker image to ACR
         run: |
           docker tag feedback-api feedbackregistry.azurecr.io/feedback-api-repo:latest
-          docker push myfeedbackregistry.azurecr.io/feedback-api-repo:latest
+          docker push feedbackregistry.azurecr.io/feedback-api-repo:latest
       
