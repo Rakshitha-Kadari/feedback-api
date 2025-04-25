@@ -48,4 +48,8 @@ jobs:
         run: |
           docker tag feedback-api feedbackregistry.azurecr.io/feedback-api-repo:latest
           docker push feedbackregistry.azurecr.io/feedback-api-repo:latest
+    # Deploy Container to Azure web App
+      - name: Deploy to Azure Web App
+        run: |
+          az webapp config container set --name feedback-webapp --resource-group rg-feedback-api --docker-custom-image-name feedbackregistry.azurecr.io/feedback-api:latest    
       
