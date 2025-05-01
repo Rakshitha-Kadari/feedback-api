@@ -21,7 +21,7 @@ def read_root():
 @app.post("/feedback")
 def receive_feedback(feedback: Feedback):
     feedback_data = feedback.dict()
-    file_path = "feedback.json"
+    file_path = "/app/data/feedback.json"
 
     if os.path.exists(file_path):
         with open(file_path,"r") as f:
